@@ -22,20 +22,15 @@ Search cars
                         <h4 style="color: #fbad1a;">{!! $car->name !!}</h4>
                         <p>{{ strlen($car->description) > 60 ? substr($car->description,0,59).'...' : $car->description }}</p>
                         <p>${{ $car->price }}</p>
-                        <a class="btn hvr-bounce-to-right" href="#">ADD TO CARD</a>
+                        <a class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#exampleModalCenter" href="#">ADD TO CARD</a>
+                        @include('site.layouts.car-modal')
                      </div>
                   </div>
                </div>
                </a>
                @endforeach	
             </div>
-            <div class="navigation">
-               <ul>
-                  <li><a href="">1</a> </li>
-                  <li><a href="">2</a> </li>
-                  <li><a href=""><i class="fa fa-angle-right" aria-hidden="true"></i></a> </li>
-               </ul>
-            </div>
+            
          </div>
          <div class="col-md-3">
             @include('site.layouts.cars-aside')

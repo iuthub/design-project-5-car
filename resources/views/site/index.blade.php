@@ -14,7 +14,6 @@
       <link rel="stylesheet" type="text/css" href="{{ asset('site/css/bootstrap.min.css') }}"/>
       <link rel="stylesheet" type="text/css" href="{{ asset('site/css/style.css') }}"/>
       <link rel="stylesheet" type="text/css" href="{{ asset('site/css/responsive.css') }}"/>
-      <!-- Replace favicon.ico & apple-touch-icon.png' ) }} in the root of your domain and delete these references -->
       <link rel="shortcut icon" href="{{ asset('images/imageedit_3_6106254637.png') }}">
       <link rel="apple-touch-icon" href="{{ asset('images/imageedit_3_6106254637.png') }}">
    </head>
@@ -250,7 +249,7 @@
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i>Selling cars</li>
                         <li><i class="fa fa-caret-right" aria-hidden="true"></i>Car rental</li>
                      </ul>
-                     <a class="hvr-bounce-to-right btn" href="#"> SEE MORE</a>
+                     <a class="hvr-bounce-to-right btn" href="{{ url('/about') }}"> SEE MORE</a>
                   </div>
                </div>
             </div>

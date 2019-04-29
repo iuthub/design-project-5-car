@@ -18,9 +18,10 @@ Cars
                   <h3>{{ $car->name }}</h3>
                   <p>${{ $car->price }}</p>
                   <p class="description">{{ $car->description }}</p>
-                  <a class="btn hvr-bounce-to-right" href="#">ADD TO CARD</a>
+                  <a class="btn hvr-bounce-to-right" data-toggle="modal" data-target="#exampleModalCenter" href="#">ADD TO CARD</a>
+                  @include('site.layouts.car-modal')
                   <div class="tag">
-                     <p>Category:<a href="#"> Rent</a></p>
+                     <p>Category:<a href="#"> {{ $car->type == 'sell' ? 'Buy' : 'Rent' }}</a></p>
                   </div>
                </div>
             </div>
