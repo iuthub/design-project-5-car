@@ -15,6 +15,7 @@
 // Routes for admin dashboard
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['admin','auth']], function(){
     Route::resource('cars','CarsController');
+    Route::resource('news','NewsController');
 });
 
 
