@@ -15,6 +15,9 @@
 // Routes for website
 Route::namespace('Site')->group(function() {
     Route::get('/', 'SiteController@index');
+    Route::get('/news', 'SiteController@news');
+    Route::get('/news/{id}', 'SiteController@newsSingle')->name('news-single');
+    Route::post('/news-search', 'SiteController@searchNews')->name('news-search');
 });
 
 // Routes for admin dashboard
