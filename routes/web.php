@@ -22,6 +22,8 @@ Route::namespace('Site')->group(function() {
     Route::post('/cars-search', 'SiteController@searchCars')->name('cars-search');
     Route::get('/cars/{id}', 'SiteController@carSingle')->name('car-single');
     Route::post('/receive-form', 'SiteController@form')->name('send-form');
+    Route::get('/contact', 'SiteController@contact');
+    Route::post('/leave-contact', 'SiteController@leaveContact');
 });
 
 // Routes for admin dashboard
