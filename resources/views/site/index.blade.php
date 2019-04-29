@@ -54,7 +54,7 @@
                   <div class="sec-line-wraper">
                      <div class="col-md-3">
                         <div class="logo">
-                           <a href="index.html"><img style="width: 100%;" src="{{ asset('images/imageedit_3_6106254637.png') }}" alt="logo" /></a>
+                           <a href="{{ url('/') }}"><img style="width: 100%;" src="{{ asset('images/imageedit_3_6106254637.png') }}" alt="logo" /></a>
                         </div>
                      </div>
                      <div class="col-md-9">
@@ -303,24 +303,26 @@
                         <h2>Latest news</h2>
                      </div>
                      @foreach($footerNews as $news)
+                     <?php 
+                        $image = \App\File::where('type','news')->where('value_id',$news->id)->first();
+                     ?>
                      <div class="news1">
                         <figure>
-                           <img src="{{ asset('site/img/new.jpg') }}" alt="awsome photo"/>
+                           <img src="{{ asset('images/small/news/'.$image->path) }}" alt="awsome photo"/>
                         </figure>
                         <div class="text-box">
                            <div class="date">
                               <p>
-                                 14
+                                 {{ $news->created_at->day }}
                                  <br>
-                                 Apr
+                                 {{ $news->created_at->format('F') }}
                               </p>
                            </div>
                            <h3>{{ $news->title }}
                               <br>
-                              <span>by Martin - 25 Comments</span>
                            </h3>
                            <p class="opis">
-                              {{ strlen($news->description) > 60 ? substr(0,59,$news->description).'...' : $news->description}}
+                              {{ strlen($news->body) > 60 ? substr($news->body,0,59).'...' : $news->body}}
                            </p>
                            <a href="{{ route('news-single',['id' => $news->id]) }}">Read More</a>
                         </div>

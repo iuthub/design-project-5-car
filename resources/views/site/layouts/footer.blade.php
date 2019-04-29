@@ -3,7 +3,7 @@
 				<div class="row">
 					<div class="col-md-3">
 						<figure>
-							<img class="img-responsive" src="img/logo2.png" alt="awsome image" />
+						<img style="width: 100%;" src="{{ asset('images/imageedit_3_6106254637.png') }}" alt="logo" />
 						</figure>
 						<p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Optio dolores, iste facilis veniam dolor quae provident, deserunt asperiores blanditiis quisquam eveniet iure. Odit quos repellendus consequatur id temporibus, optio cumque.</p>
 						<div class="social-icons">
