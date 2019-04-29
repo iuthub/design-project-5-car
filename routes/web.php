@@ -18,6 +18,9 @@ Route::namespace('Site')->group(function() {
     Route::get('/news', 'SiteController@news');
     Route::get('/news/{id}', 'SiteController@newsSingle')->name('news-single');
     Route::post('/news-search', 'SiteController@searchNews')->name('news-search');
+    Route::match(['GET', 'POST'],'/cars', 'SiteController@cars');
+    Route::post('/cars-search', 'SiteController@searchCars')->name('cars-search');
+    Route::get('/cars/{id}', 'SiteController@carSingle')->name('car-single');
 });
 
 // Routes for admin dashboard
