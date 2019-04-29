@@ -16,6 +16,8 @@
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['admin','auth']], function(){
     Route::resource('cars','CarsController');
     Route::resource('news','NewsController');
+    Route::get('forms','AdminController@forms');
+    Route::delete('form-delete/{id}','AdminController@deleteForm')->name('form-delete');
 });
 
 
