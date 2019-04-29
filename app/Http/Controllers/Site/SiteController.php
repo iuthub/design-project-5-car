@@ -164,7 +164,7 @@ class SiteController extends Controller {
             $name = $request->name;
             $familyName = $request->familyname;
             $passport = $request->passport;
-            $code = $this->getRandomString();
+            $code = $this::getRandomString();
             
 
             $form = new Form;
@@ -181,7 +181,7 @@ class SiteController extends Controller {
     }
 
     // https://stackoverflow.com/questions/5444877/generating-a-unique-random-string-of-a-certain-length-and-restrictions-in-php
-    public function getRandomString($length = 8) {
+    public static function getRandomString($length = 8) {
         $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
         $string = '';
     
