@@ -12,6 +12,11 @@
 */
 
 
+// Routes for website
+Route::namespace('Site')->group(function() {
+    Route::get('/', 'SiteController@index');
+});
+
 // Routes for admin dashboard
 Route::group(['prefix' => 'admin', 'namespace' => 'Admin', 'middleware' => ['admin','auth']], function(){
     Route::resource('cars','CarsController');
