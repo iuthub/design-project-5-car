@@ -16,6 +16,7 @@
 Route::namespace('Site')->group(function() {
     Route::get('/', 'SiteController@index');
     Route::get('/news', 'SiteController@news');
+    Route::get('/about', 'SiteController@about');
     Route::get('/news/{id}', 'SiteController@newsSingle')->name('news-single');
     Route::post('/news-search', 'SiteController@searchNews')->name('news-search');
     Route::match(['GET', 'POST'],'/cars', 'SiteController@cars');

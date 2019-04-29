@@ -14,10 +14,10 @@ Search cars
                <?php 
                   $image = \App\File::where('type','car')->where('value_id',$car->id)->first();
                   ?>
-                  <a href="{{ route('car-single',['id' => $car->id]) }}" style="background-color: white;">
+                  <a href="{{ route('car-single',['id' => $car->id]) }}" style="background-color: white; opacity: 0;">
                <div class="col-md-4">
                <div class="product">
-                     <div class="img-box"><img src="{{ asset('images/cars/'.$image->path) }}" alt="img"/></div>
+                     <div class="img-box"><img style="width: 100%;" src="{{ asset('images/cars/'.$image->path) }}" alt="img"/></div>
                      <div class="text-box">
                         <h4 style="color: #fbad1a;">{!! $car->name !!}</h4>
                         <p>{{ strlen($car->description) > 60 ? substr($car->description,0,59).'...' : $car->description }}</p>
