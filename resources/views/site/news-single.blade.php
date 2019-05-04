@@ -38,13 +38,7 @@ News
 
 @section('js')
 <script src="{{ asset('site/plugins/jquery.min.js') }}"></script>
-<script src="{{ asset('site/plugins/owl.carousel.min.js') }}"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="{{ asset('site/plugins/bootstrap.min.js') }}"></script>
-<script src="{{ asset('OwlCarousel/dist/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('site/plugins/waypoints.min.js') }}"></script>
-<script src="{{ asset('site/plugins/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('site/plugins/theme.js') }}"></script>
 <script>
    var mixer = mixitup('.thm-container');
    var mixer = mixitup(containerEl);

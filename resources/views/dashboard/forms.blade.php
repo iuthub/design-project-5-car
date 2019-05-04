@@ -28,7 +28,6 @@
                           <td>{{ $form->passport }}</td>
                           <td class="text-primary">{{ $form->code }}</td>
                           <th>
-                              <!-- <a href="{{ route('cars.edit',['car' => $form->id]) }}"><i class="material-icons">edit</i></a> -->
                               <form method="post" action="{{ route('form-delete',['id' => $form->id]) }}" id="deleteFormForm{{ $form->id }}">
                               {{ csrf_field() }}
                               <input name="_method" type="hidden" value="DELETE">

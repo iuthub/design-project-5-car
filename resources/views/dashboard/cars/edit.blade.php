@@ -103,7 +103,7 @@
                             <img id='img-upload' src="{{ asset('images/cars/'.$image->path) }}"/>
                         </div>
                     </div>
-                    <input type="submit" class="btn btn-primary pull-right" value="Create car">
+                    <input type="submit" class="btn btn-primary pull-right" value="Edit car">
                     <div class="clearfix"></div>
                   </form>
                 </div>
@@ -175,7 +175,6 @@ $(document).ready( function() {
     var saleAmount = document.getElementById('saleAmount');
     form.addEventListener('submit', function() {
         if(saleAmountHidden.style.display == "none"){
-            alert("emptying");
             saleAmount.value = "";
         }
     });

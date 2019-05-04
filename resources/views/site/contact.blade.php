@@ -112,13 +112,6 @@ Contact
 
 @section('js')	
 <script src="{{ asset('site/plugins/jquery.min.js') }}"></script>
-<script src="{{ asset('site/plugins/owl.carousel.min.js') }}"></script>
-<script src="https://maps.googleapis.com/maps/api/js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gmaps.js') }}/0.4.24/gmaps.min.js') }}"></script>
 <script src="{{ asset('site/plugins/bootstrap.min.js') }}"></script>
-<script src="{{ asset('site/plugins/map-helper.js') }}"></script>
-<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC-AVuzYG1-KEYwHw0gLOmlFX2I2YBzZGw&callback=initMap"></script>
 <script src="{{ asset('site/plugins/jquery-validation/dist/jquery.validate.min.js') }}"></script>
-<script src="{{ asset('site/OwlCarousel2-2.2.1/dist/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('site/plugins/theme.js') }}"></script>
 @stop

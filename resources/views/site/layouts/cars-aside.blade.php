@@ -47,9 +47,9 @@
         <div class="form-group">
             <label for="formControlRange">Price Range</label>
             <input type="range" name="priceRange" class="form-control-range" id="formControlRange" min="0" max="{{ $maxPrice }}">
-            <div id="price-range" style="display: inline-flex;">
-                <p>0</p>
-                <p style="float: right">{{ $maxPrice }}</p>
+            <div id="price-range" style="display: flex;">
+                <p style="width: 50%; text-align: left;">0</p>
+                <p style="text-align: right; width: 50%;">{{ $maxPrice }}</p>
             </div>
         </div>
         <input type="submit" value="Apply" class="btn btn-primary">

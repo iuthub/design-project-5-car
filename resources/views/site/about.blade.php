@@ -10,7 +10,7 @@ About
       <div class="row">
          <div class="col-md-6">
             <div class="small-images">
-               <div class=""><img style="width: 100%;" src="{{ asset('images/photo_2019-04-29_13-02-31.jpg') }}" alt="awsome image"/></div>
+            <embed style="width: 100%; height: 300px" src="https://www.youtube.com/v/oOUjqxec4bA">
             </div>
          </div>
          <div class="col-md-6">
@@ -37,11 +37,5 @@ About
 
 @section('js')
 <script src="{{ asset('site/plugins/jquery.min.js') }}"></script>
-<script src="{{ asset('site/plugins/owl.carousel.min.js') }}"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js') }}"></script>
 <script src="{{ asset('site/plugins/bootstrap.min.js') }}"></script>
-<script src="OwlCarousel/dist/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('site/plugins/waypoints.min.js') }}"></script>
-<script src="{{ asset('site/plugins/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('site/plugins/theme.js') }}"></script>
 @stop

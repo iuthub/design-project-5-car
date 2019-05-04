@@ -9,23 +9,19 @@
   <title>
     Dashboard
   </title>
-  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0, shrink-to-fit=no' name='viewport' />
-
+  <meta content='width=device-width, initial-scale=1.0, maximum-scale=1.0, name='viewport' />
   <link rel="stylesheet" type="text/css" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700|Roboto+Slab:400,700|Material+Icons" />
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
-
   <link href="{{ asset('dashboard/css/material-dashboard.css?v=2.1.1') }}" rel="stylesheet" />
-
   <link href="https://gitcdn.github.io/bootstrap-toggle/2.2.2/css/bootstrap-toggle.min.css" rel="stylesheet">
 </head>
 
 <body class="">
   <div class="wrapper ">
-    <div class="sidebar" data-color="purple" data-background-color="white" data-image="{{ asset('dashboard/img/sidebar-1.jpg') }}">
+    <div class="sidebar" data-color="purple" data-background-color="white">
       
       <div class="logo">
-        <a href="http://www.creative-tim.com" class="simple-text logo-normal">
-          IP Project
+        <a href="{{ url('/') }}" class="simple-text logo-normal">
+          Car 5ell
         </a>
       </div>
       <div class="sidebar-wrapper">
@@ -101,13 +97,8 @@
     </div>
   </div>
   
-  <!--   Core JS Files   -->
-  <script src="{{ asset('dashboard/js/core/jquery.min.js') }}"></script>
-  <script src="{{ asset('dashboard/js/core/popper.min.js') }}"></script>
-  <script src="{{ asset('dashboard/js/core/bootstrap-material-design.min.js') }}"></script>
-  <script src="{{ asset('dashboard/js/plugins/perfect-scrollbar.jquery.min.js') }}"></script>
-  
-  <!-- custom -->
+
+  <script src="{{ asset('dashboard/js/jquery.min.js') }}"></script>
   <script src="https://gitcdn.github.io/bootstrap-toggle/2.2.2/js/bootstrap-toggle.min.js"></script>
   @yield('js')
 </body>

@@ -23,13 +23,15 @@ Cars
                      </div>
                      <div class="text-box">
                         <h4 style="color: #fbad1a;">{{ $car->name }}</h4>
-                        <p>{{ strlen($car->description) > 60 ? substr($car->description,0,59).'...' : $car->description }}</p>
+                        <p>{{ str_limit($car->description, $limit = 40, $end = '...') }}</p>
                         @if($car->sale > 0)
-                        <p> <section style="text-decoration-line: line-through; text-decoration-color: red;">${{ $car->price }}</section>-->{{ $car->price - ($car->price/100 * $car->sale) }}</p> 
+                        <div class="sale" style="display: flex;">
+                           <p> <section style="text-decoration-line: line-through; text-decoration-color: red; padding-right: 10px;">${{ $car->price }} </section>  --> {{ $car->price - ($car->price/100 * $car->sale) }}</p> 
+                        </div>
                         @else
-                        <p>${{ $car->price }}</p>
+                           <p>${{ $car->price }}</p>
                         @endif
-                        <a class="btn hvr-bounce-to-right" type="button" data-toggle="modal" data-target="#exampleModalCenter" href="#">ADD TO CARD</a>
+                        <a class="btn hvr-bounce-to-right" type="button" data-toggle="modal" data-target="#exampleModalCenter" onclick="authenticate()" href="#">ADD TO CARD</a>
                         @include('site.layouts.car-modal')
                      </div>
                   </div>
@@ -48,34 +50,20 @@ Cars
 
 @section('js')
 <script src="{{ asset('site/plugins/jquery.min.js') }}"></script>
-<script src="{{ asset('site/plugins/owl.carousel.min.js') }}"></script>
-<script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
 <script src="{{ asset('site/plugins/bootstrap.min.js') }}"></script>
-<script src="OwlCarousel/dist/owl.carousel.min.js') }}"></script>
-<script src="{{ asset('site/plugins/waypoints.min.js') }}"></script>
-<script src="{{ asset('site/plugins/jquery.counterup.min.js') }}"></script>
-<script src="{{ asset('site/plugins/theme.js') }}"></script>
 <script>
-   $(function() {
-     $( "#slider-range" ).slider({
-       range: true,
-       min: 0,
-       max: 500,
-       values: [ 100, 300 ],
-       slide: function( event, ui ) {
-         $( "#amount" ).html( "$" + ui.values[ 0 ] + " - $" + ui.values[ 1 ] );
-   $( "#amount1" ).val(ui.values[ 0 ]);
-   $( "#amount2" ).val(ui.values[ 1 ]);
-       }
-     });
-     $( "#amount" ).html( "$" + $( "#slider-range" ).slider( "values", 0 ) +
-      " - $" + $( "#slider-range" ).slider( "values", 1 ) );
-   });
    
+   
+   function authenticate() {
+      @if(!Auth::check())
+         window.location.href = "/login";
+      @endif
+   }
+
     var orderBtn = document.getElementById("btnSubmit");
     var orderForm = document.getElementById("orderForm");
    
-    // orderBtn.addEventListener("onclick", function() {
+    
    function sendForm() {
         var inpname = document.getElementById("inpname");
         var familyName = document.getElementById("inpfam");
@@ -104,7 +92,7 @@ Cars
                     }
                 }); 
    }
-    // });
+    
    
 </script>
 @stop

@@ -5,15 +5,8 @@
       <title>Auto 5ell</title>
       <meta name="viewport" content="width=device-width; initial-scale=1.0">
       <link rel="stylesheet" href="{{ asset('site/font-awesome/css/font-awesome.min.css') }}">
-      <!-- Owl carousel-->
-      <link rel="stylesheet" href="{{ asset('site/css/owl.carousel.css') }}">
-      <link rel="stylesheet" href="{{ asset('site/css/owl.theme.default.css') }}">
-      <link rel="stylesheet" href="{{ asset('site/css/style_hero.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ asset('site/css/hover.css') }}">
-      <link rel="stylesheet" type="text/css" href="{{ asset('site/css/animate.css') }}">
       <link rel="stylesheet" type="text/css" href="{{ asset('site/css/bootstrap.min.css') }}"/>
       <link rel="stylesheet" type="text/css" href="{{ asset('site/css/style.css') }}"/>
-      <link rel="stylesheet" type="text/css" href="{{ asset('site/css/responsive.css') }}"/>
       <link rel="shortcut icon" href="{{ asset('images/imageedit_3_6106254637.png') }}">
       <link rel="apple-touch-icon" href="{{ asset('images/imageedit_3_6106254637.png') }}">
    </head>
@@ -173,33 +166,7 @@
          </div>
          <!-- Controls--><a href="#minimal-bootstrap-carousel" role="button" data-slide="prev" class="left carousel-control"><i class="fa fa-angle-left"></i><span class="sr-only">Previous</span></a><a href="#minimal-bootstrap-carousel" role="button" data-slide="next" class="right carousel-control"><i class="fa fa-angle-right"></i><span class="sr-only">Next</span></a>
       </div>
-      <section class="why-choose-us-third">
-         <div class="container">
-            <div class="row">
-               <div class="col-md-4">
-                  <div class="box">
-                     <div class="icon-box"><i class="fa fa-globe" aria-hidden="true"></i></div>
-                     <h4>Anywhere in Uzbekistan</h4>
-                     <p>Branches in every city to help you with your needs.</p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="box">
-                     <div class="icon-box"><i class="fa fa-truck" aria-hidden="true"></i></div>
-                     <h4>Fast Delivery</h4>
-                     <p>To anywhere you wish in Uzbekistan within <br>2-3 days.</p>
-                  </div>
-               </div>
-               <div class="col-md-4">
-                  <div class="box">
-                     <div class="icon-box"><i class="fa fa-thumbs-up" aria-hidden="true"></i></div>
-                     <h4>Frendly Support</h4>
-                     <p>Our friendly sales managers are at your service 24/7.</p>
-                  </div>
-               </div>
-            </div>
-         </div>
-      </section>
+       
       <section class="offer-wraper">
          <div class="container">
             <div class="row">
@@ -215,7 +182,7 @@
                <div class="col-md-4 col-sm-4 col-xs-12">
                   <div class="item">
                      <figure class="img-box">
-                        <a href="#"><img style="width: 100%;" src="{{ asset('images/cars/'.$image->path) }}" alt="image" /> </a>
+                        <a href="#"><img style="width: 100%;" src="{{ asset('images/small/cars/'.$image->path) }}" alt="image" /> </a>
                         <figcaption class="default-overlay-outer">
                            <div class="inner">
                               <div class="content-layer"><a class="this-link btn btn-primary" href="{{ route('car-single',['id' => $hotSale->id]) }}">See more</a> </div>
@@ -422,12 +389,6 @@
       </section>
       @include('site.layouts.footer')
       <script src="{{ asset('site/plugins/jquery.min.js') }}"></script>
-      <script src="{{ asset('site/plugins/owl.carousel.min.js') }}"></script>
-      <script src="//cdnjs.cloudflare.com/ajax/libs/waypoints/2.0.3/waypoints.min.js"></script>
       <script src="{{ asset('site/plugins/bootstrap.min.js') }}"></script>
-      <script src="{{ asset('site/OwlCarousel2-2.2.1/dist/owl.carousel.min.js') }}"></script>
-      <script src="{{ asset('site/plugins/waypoints.min.js') }}"></script>
-      <script src="{{ asset('site/plugins/jquery.counterup.min.js') }}"></script>
-      <script src="{{ asset('site/plugins/theme.js') }}"></script>
    </body>
 </html>
